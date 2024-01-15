@@ -35,7 +35,6 @@ class UserLoginView(CreateAPIView):
     permission_classes = [AllowAny]
     serializer_class = UserSerializer
 
-    @permission_classes([AllowAny])
     @api_view(['POST'])
     def create(self, request, *args, **kwargs):
         print(request.data)

@@ -21,13 +21,13 @@ function Login() {
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
   
-    // try {
-    //   const response = await axios.post('http://localhost:8000/login/', loginFormData);
-    //   console.log('Login Successful:', response.data);
-    //   setLoggedInUser(response.data);
-    // } catch (error) {
-    //   console.error('Login Failed:', error.response.data);
-    // }
+    try {
+      const response = await axios.post('http://localhost:8000/login/', loginFormData);
+      console.log('Login Successful:', response.data);
+      setLoggedInUser(response.data);
+    } catch (error) {
+      console.error('Login Failed:', error.response.data);
+    }
     console.log('Login Successful:', loginFormData);
     setLoggedInUser(true);  
   };
